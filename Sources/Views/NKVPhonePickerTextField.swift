@@ -119,7 +119,7 @@ open class NKVPhonePickerTextField: UITextField {
     
     private func initialize() {
         self.leftViewMode = .always;
-        self.keyboardType = .numberPad
+        self.keyboardType = .phonePad
         flagView = NKVFlagView(with: self)
         self.leftView = flagView
         self.delegate = self
@@ -157,11 +157,11 @@ open class NKVPhonePickerTextField: UITextField {
             pickerVC.countriesVCNavigationItem.title = pickerTitle
         }
         if let pickerTitleFont = pickerTitleFont, let navController = pickerVC.navigationController {
-            let fontAttributes = [NSFontAttributeName: pickerTitleFont]
+            let fontAttributes = [NSAttributedStringKey.font: pickerTitleFont]
             navController.navigationBar.titleTextAttributes = fontAttributes
         }
         if let pickerCancelButtonFont = pickerCancelButtonFont {
-            let fontAttributes = [NSFontAttributeName: pickerCancelButtonFont]
+            let fontAttributes = [NSAttributedStringKey.font: pickerCancelButtonFont]
             pickerVC.countriesVCNavigationItem.leftBarButtonItem?.setTitleTextAttributes(fontAttributes, for: .normal)
             pickerVC.countriesVCNavigationItem.leftBarButtonItem?.setTitleTextAttributes(fontAttributes, for: .highlighted)
         }
