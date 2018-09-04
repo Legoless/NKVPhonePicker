@@ -157,11 +157,11 @@ open class NKVPhonePickerTextField: UITextField {
             pickerVC.countriesVCNavigationItem.title = pickerTitle
         }
         if let pickerTitleFont = pickerTitleFont, let navController = pickerVC.navigationController {
-            let fontAttributes = [NSAttributedStringKey.font: pickerTitleFont]
+            let fontAttributes = [NSAttributedString.Key.font: pickerTitleFont]
             navController.navigationBar.titleTextAttributes = fontAttributes
         }
         if let pickerCancelButtonFont = pickerCancelButtonFont {
-            let fontAttributes = [NSAttributedStringKey.font: pickerCancelButtonFont]
+            let fontAttributes = [NSAttributedString.Key.font: pickerCancelButtonFont]
             pickerVC.countriesVCNavigationItem.leftBarButtonItem?.setTitleTextAttributes(fontAttributes, for: .normal)
             pickerVC.countriesVCNavigationItem.leftBarButtonItem?.setTitleTextAttributes(fontAttributes, for: .highlighted)
         }
